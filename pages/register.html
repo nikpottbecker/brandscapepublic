@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrandScape - Registrierung</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/auth.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">BrandScape</div>
+        <!-- ... Rest der Navigation ... -->
+    </nav>
+
+    <main class="auth-container">
+        <div class="auth-box">
+            <h2>Registrierung</h2>
+            <div class="account-type-selector">
+                <button class="type-button active" data-type="user">Kunde</button>
+                <button class="type-button" data-type="brand">Marke</button>
+            </div>
+            <form id="registerForm" class="auth-form">
+                <div class="form-group">
+                    <label for="email">E-Mail</label>
+                    <input type="email" id="email" required>
+                </div>
+                
+                <!-- Felder für normale Benutzer -->
+                <div class="user-fields">
+                    <div class="form-group">
+                        <label for="username">Benutzername</label>
+                        <input type="text" id="username" required>
+                    </div>
+                </div>
+
+                <!-- Felder für Marken -->
+                <div class="brand-fields" style="display: none;">
+                    <div class="form-group">
+                        <label for="brandName">Markenname</label>
+                        <input type="text" id="brandName">
+                    </div>
+                    <div class="form-group">
+                        <label for="brandDescription">Markenbeschreibung</label>
+                        <textarea id="brandDescription" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="website">Website</label>
+                        <input type="url" id="website">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Passwort</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Passwort bestätigen</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+                <button type="submit" class="auth-button">Registrieren</button>
+            </form>
+            <p class="auth-switch">
+                Bereits ein Konto? <a href="login.html">Jetzt anmelden</a>
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <!-- ... Footer-Inhalt ... -->
+    </footer>
+    <script src="../assets/js/auth.js"></script>
+</body>
+</html> 

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrandScape - Produkte</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/products.css">
+</head>
+<body>
+    <nav class="navbar">
+        <!-- ... Navigation ... -->
+    </nav>
+
+    <main class="products-container">
+        <aside class="filter-sidebar">
+            <div class="filter-section">
+                <h3>Kategorien</h3>
+                <div class="filter-options">
+                    <label><input type="checkbox" value="clothing"> Kleidung</label>
+                    <label><input type="checkbox" value="shoes"> Schuhe</label>
+                    <label><input type="checkbox" value="accessories"> Accessoires</label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Marken</h3>
+                <div class="filter-options" id="brandFilters">
+                    <!-- Wird dynamisch gefüllt -->
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Preisspanne</h3>
+                <div class="price-range">
+                    <input type="number" id="minPrice" placeholder="Min €">
+                    <span>-</span>
+                    <input type="number" id="maxPrice" placeholder="Max €">
+                </div>
+            </div>
+
+            <button id="applyFilters" class="filter-button">Filter anwenden</button>
+            <button id="resetFilters" class="filter-button secondary">Filter zurücksetzen</button>
+        </aside>
+
+        <section class="products-main">
+            <div class="products-header">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Produkte oder Marken suchen...">
+                </div>
+                <div class="sort-options">
+                    <select id="sortSelect">
+                        <option value="newest">Neueste zuerst</option>
+                        <option value="priceAsc">Preis aufsteigend</option>
+                        <option value="priceDesc">Preis absteigend</option>
+                        <option value="nameAsc">Name A-Z</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="active-filters" id="activeFilters">
+                <!-- Aktive Filter-Tags werden hier angezeigt -->
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Produkte werden dynamisch eingefügt -->
+            </div>
+
+            <div class="pagination" id="pagination">
+                <!-- Seitenzahlen werden dynamisch eingefügt -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- ... Footer ... -->
+    </footer>
+    <script src="../assets/js/products.js"></script>
+</body>
+</html> 

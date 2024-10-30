@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrandScape - Admin Dashboard</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <nav class="admin-sidebar">
+            <div class="admin-logo">BrandScape Admin</div>
+            <ul class="admin-menu">
+                <li class="active"><a href="#dashboard"><i class="fas fa-home"></i>Dashboard</a></li>
+                <li><a href="#brands"><i class="fas fa-store"></i>Marken verwalten</a></li>
+                <li><a href="#users"><i class="fas fa-users"></i>Benutzer</a></li>
+                <li><a href="#content"><i class="fas fa-edit"></i>Inhalt bearbeiten</a></li>
+                <li><a href="#settings"><i class="fas fa-cog"></i>Einstellungen</a></li>
+            </ul>
+        </nav>
+
+        <main class="admin-main">
+            <header class="admin-header">
+                <div class="admin-search">
+                    <input type="search" placeholder="Suchen...">
+                </div>
+                <div class="admin-profile">
+                    <span id="adminName">Admin Name</span>
+                    <button id="logoutBtn">Abmelden</button>
+                </div>
+            </header>
+
+            <div class="admin-content">
+                <section id="dashboard-section" class="active-section">
+                    <h2>Dashboard</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>Neue Markenanfragen</h3>
+                            <p id="pendingBrands">0</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Aktive Benutzer</h3>
+                            <p id="activeUsers">0</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Genehmigte Marken</h3>
+                            <p id="approvedBrands">0</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="brands-section" class="section">
+                    <h2>Marken verwalten</h2>
+                    <div class="brands-pending">
+                        <h3>Ausstehende Genehmigungen</h3>
+                        <div id="pendingBrandsList" class="brands-list">
+                            <!-- Wird dynamisch gefüllt -->
+                        </div>
+                    </div>
+                </section>
+
+                <section id="users-section" class="section">
+                    <h2>Benutzerverwaltung</h2>
+                    <div class="users-table-container">
+                        <table class="users-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Benutzername</th>
+                                    <th>E-Mail</th>
+                                    <th>Typ</th>
+                                    <th>Aktionen</th>
+                                </tr>
+                            </thead>
+                            <tbody id="usersTableBody">
+                                <!-- Wird dynamisch gefüllt -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="../../assets/js/admin.js"></script>
+</body>
+</html> 

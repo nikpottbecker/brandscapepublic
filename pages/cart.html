@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrandScape - Warenkorb</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/cart.css">
+</head>
+<body>
+    <nav class="navbar">
+        <!-- ... Navigation ... -->
+    </nav>
+
+    <main class="cart-container">
+        <h1>Ihr Warenkorb</h1>
+        
+        <div class="cart-content">
+            <div class="cart-items" id="cartItems">
+                <!-- Wird dynamisch gefüllt -->
+            </div>
+
+            <div class="cart-summary">
+                <h2>Zusammenfassung</h2>
+                <div class="summary-item">
+                    <span>Zwischensumme</span>
+                    <span id="subtotal">0,00 €</span>
+                </div>
+                <div class="summary-item">
+                    <span>Versandkosten</span>
+                    <span id="shipping">0,00 €</span>
+                </div>
+                <div class="summary-item total">
+                    <span>Gesamtsumme</span>
+                    <span id="total">0,00 €</span>
+                </div>
+                <button id="checkoutBtn" class="checkout-button">Zur Kasse</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Checkout Modal -->
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+            <h2>Bestellung abschließen</h2>
+            <form id="checkoutForm">
+                <div class="form-group">
+                    <label>Lieferadresse</label>
+                    <input type="text" id="street" placeholder="Straße" required>
+                    <input type="text" id="city" placeholder="Stadt" required>
+                    <input type="text" id="zipCode" placeholder="PLZ" required>
+                </div>
+                <div class="form-group">
+                    <label>Zahlungsmethode</label>
+                    <select id="paymentMethod" required>
+                        <option value="credit">Kreditkarte</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="bank">Banküberweisung</option>
+                    </select>
+                </div>
+                <button type="submit" class="primary-button">Jetzt kaufen</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../assets/js/cart.js"></script>
+</body>
+</html> 
